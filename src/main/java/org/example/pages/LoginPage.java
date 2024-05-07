@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import org.example.utils.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,17 +11,16 @@ public class LoginPage extends BasePage{
     @FindBy(css = "[data-testid='open-registration-form-button']")
     private WebElement signUpBtn;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver,LoginPage.class);
+    public LoginPage() {
+        PageFactory.initElements(DriverManager.getDriver(),LoginPage.class);
     }
 
     public void openUrl() {
-        driver.get("https://facebook.com");
+        DriverManager.getDriver().get("https://facebook.com");
     }
 
     public SignUpFormPage clickSignUpBtn() {
         signUpBtn.click();
-        return new SignUpFormPage(driver);
+        return new SignUpFormPage();
     }
 }

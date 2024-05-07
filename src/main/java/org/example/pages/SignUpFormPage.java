@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import org.example.utils.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,8 @@ public class SignUpFormPage extends BasePage{
     @FindBy(name = "firstname")
     private WebElement firstName;
 
-    public SignUpFormPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+    public SignUpFormPage() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
     public boolean isSignUpTitlePresent() {

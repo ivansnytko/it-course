@@ -11,10 +11,11 @@ import java.util.Date;
 
 public class ScreenShotUtils {
 
+    @Deprecated
     public static void takeScreenshot(WebDriver driver) {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         Date date = new Date();
-        File screenshot = new File(date.getTime() + ".png");
+        File screenshot = new File("target/" + date.getTime() + ".png");
         try {
             FileUtils.copyFile(file, screenshot);
         } catch (IOException e) {

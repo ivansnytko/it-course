@@ -1,27 +1,20 @@
 package org.example;
 
-import org.apache.commons.io.FileUtils;
 import org.example.pages.LoginPage;
 import org.example.pages.SignUpFormPage;
 import org.example.utils.ScreenShotUtils;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class FacebookTest extends BaseTest{
+public class FacebookTest2 extends BaseTest{
 
     @Test
     public void testFrame() throws InterruptedException {
@@ -73,9 +66,6 @@ public class FacebookTest extends BaseTest{
 
     @Test
     public void signUpFacebookTest() {
-        Configuration.browser= chrome;
-        Configuration.remote= ""http://test:test-password@localhost:4444/wd/hub;
-    open("")
         LoginPage loginPage = new LoginPage();
         loginPage.openUrl();
         SignUpFormPage signUpFormPage = loginPage.clickSignUpBtn();

@@ -1,0 +1,2 @@
+2024-05-07 21:05:31,045 INFO o.e.t.LoggerTest [main] Hello World
+2024-05-07 21:05:31,048 ERROR o.e.t.LoggerTest [main] Hello World
