@@ -73,9 +73,6 @@ public class FacebookTest extends BaseTest{
 
     @Test
     public void signUpFacebookTest() {
-        Configuration.browser= chrome;
-        Configuration.remote= ""http://test:test-password@localhost:4444/wd/hub;
-    open("")
         LoginPage loginPage = new LoginPage();
         loginPage.openUrl();
         SignUpFormPage signUpFormPage = loginPage.clickSignUpBtn();
