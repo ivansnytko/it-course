@@ -15,7 +15,7 @@ public class DriverManager {
     static ThreadLocal<WebDriver> localDriver = new ThreadLocal<>();
     private static final Logger LOGGER = LogManager.getLogger(DriverManager.class);
 
-    public static WebDriver getDriver() {
+    public synchronized static WebDriver getDriver() {
         if (localDriver.get() == null) {
             driver = DriverFactory.createDriver(PropertyReader.getConfigProperty(Capability.BROWSER));
             EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator(new ElementActionListener());
