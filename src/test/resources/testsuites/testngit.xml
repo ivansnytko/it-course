@@ -3,9 +3,9 @@
 
 <suite name = "Suite1" thread-count="3" parallel="methods">
 <!--    <parameter name="key" value="value"></parameter>-->
-    <listeners>
-        <listener class-name="org.example.utils.retry.AnnotationTransformer"/>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="org.example.utils.retry.AnnotationTransformer"/>-->
+<!--    </listeners>-->
     <test name = "exampletest1">
         <classes>
             <class name = "org.example.FacebookTest" >
