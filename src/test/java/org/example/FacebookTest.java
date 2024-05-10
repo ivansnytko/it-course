@@ -94,8 +94,6 @@ public class FacebookTest extends BaseTest{
         driver.get("http://www.google.com");
         WebElement element = driver.findElement(By.name("q"));
         element.sendKeys("Selenium");
-        Thread.sleep(5000);
-        ScreenShotUtils.takeScreenshot(driver);
         element.submit();
     }
 
