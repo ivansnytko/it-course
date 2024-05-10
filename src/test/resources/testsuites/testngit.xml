@@ -8,9 +8,9 @@
     </listeners>
     <test name = "exampletest1">
         <classes>
-            <class name = "org.example.testngexample.TestNgTest" >
+            <class name = "org.example.FacebookTest" >
                 <methods>
-                    <include name="firstTest"/>
+                    <include name="googleTest"/>
                 </methods>
             </class>
         </classes>
