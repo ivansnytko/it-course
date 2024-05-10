@@ -1,5 +1,7 @@
 package org.example.utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.example.enums.Capability;
 import org.example.listeners.ElementActionListener;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import java.time.Duration;
 public class DriverManager {
     static WebDriver driver;
     static ThreadLocal<WebDriver> localDriver = new ThreadLocal<>();
+    private static final Logger LOGGER = LogManager.getLogger(DriverManager.class);
 
     public static WebDriver getDriver() {
         if (localDriver.get() == null) {
@@ -27,8 +30,11 @@ public class DriverManager {
     }
 
     public static void quitDriver() {
+        LOGGER.info("Before quit");
         localDriver.get().quit();
+        LOGGER.info("After quit");
         localDriver.set(null);
+        LOGGER.info("After set null");
     }
 
 }
