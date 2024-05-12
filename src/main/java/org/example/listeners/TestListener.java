@@ -22,6 +22,7 @@ public class TestListener implements ITestListener {
         System.out.println("=========================================================");
         System.out.println("Test " + result.getMethod().getMethodName() +  " success");
         System.out.println("=========================================================");
+        DriverManager.quitDriver();
     }
 
     @Override
@@ -31,10 +32,11 @@ public class TestListener implements ITestListener {
         System.out.println("=========================================================");
         ScreenShotUtils.takeScreenshot(DriverManager.getDriver());
         System.out.println(DriverManager.getDriver().getPageSource());
+        DriverManager.quitDriver();
     }
 
     @Override
-    public void onFinish(ITestContext context) {
+    public void onTestSkipped(ITestResult result) {
         DriverManager.quitDriver();
     }
 }

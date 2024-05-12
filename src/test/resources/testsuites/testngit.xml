@@ -9,9 +9,6 @@
     <test name = "exampletest1">
         <classes>
             <class name = "org.example.FacebookTest" >
-                <methods>
-                    <include name="googleTest"/>
-                </methods>
             </class>
         </classes>
     </test>

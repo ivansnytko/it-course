@@ -30,14 +30,8 @@ public class DriverManager {
     }
 
     public static void quitDriver() {
-        LOGGER.info("Before quit");
-        if (localDriver.get() ==null)
-            driver.quit();
-        else
-            localDriver.get().quit();
-        LOGGER.info("After quit");
+        localDriver.get().quit();
         localDriver.set(null);
-        LOGGER.info("After set null");
     }
 
 }
