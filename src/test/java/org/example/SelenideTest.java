@@ -4,9 +4,12 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.example.pages.SelenidePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -20,7 +23,11 @@ import static org.testng.Assert.assertEquals;
 public class SelenideTest {
 
     @Test
-    public void googleTest() throws IOException, InterruptedException {
+    public void googleTest() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(true)
+        );
         SelenidePage selenidePage = open("", SelenidePage.class);
 
         SelenidePage selenide2Page = page(SelenidePage.class);
@@ -30,13 +37,10 @@ public class SelenideTest {
         Configuration.headless = true;
         open("http://www.google.com");
         SelenideElement selenideElement = $(By.name("q"));
-        $(By.name("q")).shouldBe(disappear).click();
         $(By.xpath("q")).val("Selenium");
         $(By.id("q")).submit();
-        WebDriverRunner.isChrome();
+        Assert.fail();
 
-        ElementsCollection list = $$(By.name("q"));
-        list.should(sizeGreaterThan(1));
         
 
 
