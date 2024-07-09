@@ -1,4 +1,0 @@
-2024-05-07 21:08:23,155 DEBUG o.e.t.LoggerTest [main] debug
-2024-05-07 21:08:23,180 INFO o.e.t.LoggerTest [main] info
-2024-05-07 21:08:23,182 WARN o.e.t.LoggerTest [main] warning
-2024-05-07 21:08:23,184 ERROR o.e.t.LoggerTest [main] error
