@@ -27,7 +27,7 @@ public class FacebookTest extends BaseTest{
     public void testFrame() throws InterruptedException {
         driver.get("https://symonstorozhenko.wixsite.com/website-1");
 
-        Thread.sleep(5000);
+        // Thread.sleep(5000);
         WebElement frame = driver.findElement(By.xpath("//*[@title= 'Wix Chat']"));
         driver.switchTo().frame(frame);
         driver.findElement(By.cssSelector("#minimized-chat")).click();
