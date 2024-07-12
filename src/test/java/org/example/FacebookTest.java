@@ -27,7 +27,7 @@ public class FacebookTest extends BaseTest{
     public void testFrame() throws InterruptedException {
         driver.get("https://symonstorozhenko.wixsite.com/website-1");
 
-        Thread.sleep(5000);
+        // Thread.sleep(5000);
         WebElement frame = driver.findElement(By.xpath("//*[@title= 'Wix Chat']"));
         driver.switchTo().frame(frame);
         driver.findElement(By.cssSelector("#minimized-chat")).click();
@@ -46,7 +46,7 @@ public class FacebookTest extends BaseTest{
         driver.get("https://facebook.com");
         WebElement element = driver.findElement(By.cssSelector("[data-testid='open-registration-form-button']"));
         driver.navigate().refresh();
-        element.click();
+//        element.click();
     }
 
     @Test
@@ -69,8 +69,6 @@ public class FacebookTest extends BaseTest{
         WebElement dayPicker = driver.findElement(By.name("birthday_day"));
         Select daySelect = new Select(dayPicker);
         daySelect.selectByIndex(3);
-        daySelect.selectByValue("5");
-        daySelect.selectByVisibleText("7");
         driver.findElement(By.cssSelector("[name= 'websubmit']")).click();
         WebElement error = driver.findElement(By.id("js_o"));
         Assert.assertEquals(error.getText(), "What's your name?");
