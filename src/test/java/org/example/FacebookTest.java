@@ -37,7 +37,7 @@ public class FacebookTest extends BaseTest{
         alert.accept();
         alert.dismiss();
         alert.sendKeys("");
-        alert.getText();
+        // alert.getText();
     }
 
     @Test
