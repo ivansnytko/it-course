@@ -27,7 +27,7 @@ public class FacebookTest2 extends BaseTest{
         driver.switchTo().defaultContent();
 
         Alert alert = driver.switchTo().alert();
-        alert.accept();
+        //alert.accept();
         alert.dismiss();
         /////////// alert.sendKeys("");
          alert.getText();
