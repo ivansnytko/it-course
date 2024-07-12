@@ -67,8 +67,8 @@ public class FacebookTest extends BaseTest{
         signUpFormPage.typeFirstName("Ivan");
         WebElement dayPicker = driver.findElement(By.name("birthday_day"));
         Select daySelect = new Select(dayPicker);
-        daySelect.selectByIndex(3);
-        daySelect.selectByValue("5");
+        // daySelect.selectByIndex(3);
+        // daySelect.selectByValue("5");
         daySelect.selectByVisibleText("7");
         driver.findElement(By.cssSelector("[name= 'websubmit']")).click();
         WebElement error = driver.findElement(By.id("js_o"));
