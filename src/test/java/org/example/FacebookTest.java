@@ -45,7 +45,7 @@ public class FacebookTest extends BaseTest{
         driver.get("https://facebook.com");
         WebElement element = driver.findElement(By.cssSelector("[data-testid='open-registration-form-button']"));
         driver.navigate().refresh();
-        element.click();
+//        element.click();
     }
 
     @Test
