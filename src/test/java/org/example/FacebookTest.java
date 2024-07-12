@@ -38,19 +38,6 @@ public class FacebookTest extends BaseTest{
         alert.dismiss();
         alert.sendKeys("");
         alert.getText();
-
-//        Wait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-//        wait.until(ExpectedConditions.titleIs("Google"));
-//        wait.until(x->frame.isDisplayed());
-//        WebElement amountOfProducts= driver.findElement();
-//        String amountBeforeFilter = amountOfProducts.getText();
-//        FluentWait fluentWait = new FluentWait(driver).withTimeout(Duration.ofSeconds(30))
-//                .pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class).ignoring(ElementNotInteractableException.class);
-//        fluentWait.until(x-> {
-//            WebElement element = driver.findElement();
-//            element.sendKeys();
-//            return true;
-//        });
     }
 
     @Test
