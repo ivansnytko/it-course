@@ -27,9 +27,9 @@ public class FacebookTest2 extends BaseTest{
         driver.switchTo().defaultContent();
 
         Alert alert = driver.switchTo().alert();
-        alert.accept();
+        //alert.accept();
         alert.dismiss();
-        // alert.sendKeys("");
+        alert.sendKeys("");
         // alert.getText();
 
 //        Wait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
